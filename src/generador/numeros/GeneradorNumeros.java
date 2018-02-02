@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -87,7 +88,7 @@ public class GeneradorNumeros {
             try {
                 out = new BufferedWriter(new FileWriter("C:\\Users\\Cayalav\\Desktop\\prueba.txt", true));
                 out.write(salida);
-                //out.newLine();
+                out.newLine();
             } catch (IOException e) {
                 System.out.println("Hubo un error: "+e.getMessage());
                 // error processing code   
