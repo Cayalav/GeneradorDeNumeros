@@ -62,7 +62,7 @@ public class GeneradorNumeros {
             minimo = "" + resultadoMinimo;
         }
 
-        System.out.println("Estos son los " + numerosGenerados + " numeros generados:");
+        //System.out.println("Estos son los " + numerosGenerados + " numeros generados:");
 
         BigInteger bigInteger = new BigInteger(maximo);// Maximo limite
         BigInteger min = new BigInteger(minimo);// Minimo limite
@@ -84,7 +84,7 @@ public class GeneradorNumeros {
             }
 
             //Escritura de datos
-            salida = "" + aRandomBigInt;
+            salida = aRandomBigInt+"   #"+i+1;
             try {
                 out = new BufferedWriter(new FileWriter("C:\\Users\\Cayalav\\Desktop\\prueba.txt", true));
                 out.write(salida);
