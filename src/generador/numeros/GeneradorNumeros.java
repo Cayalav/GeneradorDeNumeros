@@ -9,6 +9,7 @@ package generador.numeros;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.util.Random;
 import java.util.Scanner;
@@ -23,6 +24,8 @@ public class GeneradorNumeros {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        
+         String file = "C:\\Users\\Cayalav\\Desktop\\prueba.txt";
 
         BufferedWriter out = null;
         long numerosGenerados;
@@ -34,6 +37,11 @@ public class GeneradorNumeros {
         String minimo;
 
         Scanner sc = new Scanner(System.in);
+        
+        //Limpia el notepad antes de escribir
+        PrintWriter writer = new PrintWriter(file);
+        writer.print("");
+        writer.close();
 
         System.out.println("Bienvenido al Generador de numeros");
         System.out.println("¿Cuantos numeros desea generar?");
@@ -84,9 +92,9 @@ public class GeneradorNumeros {
             }
 
             //Escritura de datos
-            salida = aRandomBigInt+"   #"+i+1;
+            salida = aRandomBigInt+"    #"+(i+1);
             try {
-                out = new BufferedWriter(new FileWriter("C:\\Users\\Cayalav\\Desktop\\prueba.txt", true));
+                out = new BufferedWriter(new FileWriter(file, true));
                 out.write(salida);
                 out.newLine();
             } catch (IOException e) {
